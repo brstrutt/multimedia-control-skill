@@ -14,26 +14,32 @@ class MultimediaControl(MycroftSkill):
             pass
     
     def handler_mycroft_audio_service_play(self, message):
+        self.log.inf("mycroft audio service play received")
         if this.mediaPlayer != None:
             this.mediaPlayer.Play()
 
     def handler_mycroft_audio_service_stop(self, message):
+        self.log.inf("mycroft audio service stop received")
         if this.mediaPlayer != None:
             this.mediaPlayer.Pause()
 
     def handler_mycroft_audio_service_pause(self, message):
+        self.log.inf("mycroft audio service pause received")
         if this.mediaPlayer != None:
             this.mediaPlayer.Pause()
 
     def handler_mycroft_audio_service_resume(self, message):
+        self.log.inf("mycroft audio service resume received")
         if this.mediaPlayer != None:
             this.mediaPlayer.Play()
 
     def handler_mycroft_audio_service_next(self, message):
+        self.log.inf("mycroft audio service next received")
         if this.mediaPlayer != None:
             this.mediaPlayer.Next()
 
     def handler_mycroft_audio_service_prev(self, message):
+        self.log.inf("mycroft audio service prev received")
         if this.mediaPlayer != None:
             this.mediaPlayer.Previous()
 
