@@ -6,12 +6,14 @@ class MultimediaControl(MycroftSkill):
         MycroftSkill.__init__(self)
         this.mediaPlayer = None
 
+    def initialize(self):
         # Grab the first URI in the list. This will just grab whatever media player happens to be first.
         try:
             uri = next(mpris2.get_players_uri())
             this.mediaPlayer = mpris2.Player(dbus_interface_info={'dbus_uri': uri})
         except StopIteration:
             pass
+        self.log.info("Multimedia Control started. Controlling URI: " + str(uri))
     
     def handler_mycroft_audio_service_play(self, message):
         self.log.inf("mycroft audio service play received")
