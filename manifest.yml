@@ -8,6 +8,7 @@
 #   # Pip dependencies on PyPI
    python:
      - mpris2
+     - dbus-python
 #
 #   # Install packages with the system package manager
 #   # This searches for the provided executable and uses the package names
