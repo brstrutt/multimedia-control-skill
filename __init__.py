@@ -13,6 +13,7 @@ class MultimediaControl(MycroftSkill):
             self.mediaPlayer = mpris2.Player(dbus_interface_info={'dbus_uri': uri})
         except StopIteration:
             pass
+
         self.log.info("Multimedia Control started. Controlling URI: " + str(uri))
         
         # Bind to the various audio service messages
